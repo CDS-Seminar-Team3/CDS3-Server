@@ -17,6 +17,11 @@ public enum SuccessStatus {
     petitionAgree
      */
     POST_AGREE_SUCCESS(HttpStatus.CREATED, "청원 동의가 완료되었습니다."),
+
+    /*
+    MyPetition
+     */
+    GET_MY_PETITION(HttpStatus.OK, "나의 청원 조회하기 성공"),
     ;
 
 
