@@ -12,7 +12,14 @@ public enum SuccessStatus {
     user
      */
     SIGNUP_SUCCESS(HttpStatus.CREATED, "회원가입이 완료되었습니다."),
+
+    /*
+    petitionAgree
+     */
+    POST_AGREE_SUCCESS(HttpStatus.CREATED, "청원 동의가 완료되었습니다."),
     ;
+
+
 
     private final HttpStatus httpStatus;
     private final String message;
