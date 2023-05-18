@@ -1,4 +1,4 @@
-package com.server.cds3.dto.request;
+package com.server.cds3.dto.response.petition;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
