@@ -1,6 +1,5 @@
-package com.server.cds3.dto.request;
+package com.server.cds3.dto.request.petition;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
