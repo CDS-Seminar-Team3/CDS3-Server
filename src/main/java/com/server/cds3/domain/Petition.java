@@ -37,5 +37,4 @@ public class Petition extends AuditingTimeEntity{
         this.content = content;
         this.user = user;
     }
-
 }
