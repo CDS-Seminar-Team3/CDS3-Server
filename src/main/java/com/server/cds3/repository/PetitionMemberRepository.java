@@ -11,4 +11,7 @@ import java.util.List;
 public interface PetitionMemberRepository extends JpaRepository<PetitionMember, Long> {
     List<PetitionMember> findAllByPetition(Petition petition);
 
+    long countByPetition(Petition petition);
+
+    List<PetitionMember> findByPetition(Petition petition);
 }
