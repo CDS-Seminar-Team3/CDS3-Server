@@ -10,5 +10,9 @@ import java.util.List;
 @Repository
 public interface PetitionMemberRepository extends JpaRepository<PetitionMember, Long> {
     List<PetitionMember> findAllByPetition(Petition petition);
+    Long countByPetitionId(Long petitionId);
 
+    long countByPetition(Petition petition);
+
+    List<PetitionMember> findByPetition(Petition petition);
 }
