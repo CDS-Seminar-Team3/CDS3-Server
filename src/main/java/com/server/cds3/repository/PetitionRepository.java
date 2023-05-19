@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface PetitionRepository extends JpaRepository<Petition, Long> {
+public interface PetitionRepository extends JpaRepository<Petition, Long>, PetitionRepositoryCustom {
     List<Petition> findAllByUser(User user);
-
 }
