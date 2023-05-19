@@ -18,6 +18,6 @@ public class MainController {
     public ApiResponseDto<GetMainPetitionDto> getMainPetition(
             @RequestHeader("user-id") long userId
     ) {
-        return ApiResponseDto.success(SuccessStatus.SIGNUP_SUCCESS, mainService.getMainPetition(userId));
+        return ApiResponseDto.success(SuccessStatus.GET_MAIN, mainService.getMainPetition(userId));
     }
 }
