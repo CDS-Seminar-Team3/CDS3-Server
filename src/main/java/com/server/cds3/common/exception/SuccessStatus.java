@@ -22,6 +22,11 @@ public enum SuccessStatus {
     MyPetition
      */
     GET_MY_PETITION(HttpStatus.OK, "나의 청원 조회하기 성공"),
+
+    /*
+    petitionDetail
+     */
+    GET_PETITION_DETAIL(HttpStatus.OK, "청원 상세 내용 조회하기 성공")
     ;
 
 
