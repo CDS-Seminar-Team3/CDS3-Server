@@ -130,12 +130,6 @@
 │   ├── PetitionController
 │   ├── PetitionDetailController
 │   └── UserController
-│   │   ├── UserController
-│   │   └── 📂 dto
-│   │        └── 📂 request
-│   │        └── 📂 response
-│   ├── 📂 review
-│   └── 📂 post
 ├── 📂 domain
 │   ├── AuditingTimeEntity
 │   ├── Petition
