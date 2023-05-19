@@ -1,5 +1,13 @@
 # CDS3-Server
 
+## 팀원 소개
+💙서버 최강 OB : 박현정
+
+🐣서버 최강(이 되고 싶은) YB : 정홍준
+
+## 역할 분담
+![image](https://github.com/CDS-Seminar-Team3/CDS3-Server/assets/97835512/bff120ca-b348-4fbd-abaf-6bf3af89e09f)
+
 
 ## Git Convention
 
@@ -101,3 +109,74 @@
  <br>
  클래스와 같은 규칙을 사용합니다.
      </div>  </details>
+
+
+## 개발환경
+- Java 11.0.19
+- Spring
+- JPA
+
+## 프로젝트 구조
+  ```
+├── 📂 common
+|   ├── 📂 dto
+|   └── 📂 exception
+├── 📂 config
+│   └── QueryDslConfig
+├── 📂 controller
+│   ├── MainController
+│   ├── MyPetitionController
+│   ├── PetitionAgreeListController
+│   ├── PetitionController
+│   ├── PetitionDetailController
+│   └── UserController
+│   │   ├── UserController
+│   │   └── 📂 dto
+│   │        └── 📂 request
+│   │        └── 📂 response
+│   ├── 📂 review
+│   └── 📂 post
+├── 📂 domain
+│   ├── AuditingTimeEntity
+│   ├── Petition
+│   ├── PetitionLink
+│   ├── PetitionMember
+│   └── User
+├── 📂 dto
+│   ├── 📂 request
+│   |   ├── 📂 petition
+|   │   │   ├── PetitionRegisterRequestDto
+|   │   │   └── PostPetitionAgreeRequestDto
+│   │   └── UserRequestDto
+│   └── 📂 response
+│       ├── 📂 main
+|       │   ├── GetMainPetitionDto
+|       │   ├── IssuePetition
+|       │   └── NewPetition
+│       ├── 📂 myPetition
+|       │   └── GetMyPetitionResponseDto
+│       ├── 📂 petition
+|       │   ├── PetitionAgreeListResponseDto
+|       │   ├── PetitionDetailResponseDto
+|       │   ├── PetitionRegisterResponseDto
+|       │   └── PostPetitionAgreeResponseDto
+│       └── UserRequestDto
+├── 📂 repository
+│   ├── PetitionLinkRepository
+│   ├── PetitionMemberRepository
+│   ├── PetitionRepository
+│   ├── PetitionRepositoryCustom
+│   ├── PetitionRepositorylmpl
+│   └── UserRepository
+├── 📂 service
+│   ├── MainService
+│   ├── MyPetitionService
+│   ├── PetitionAgreeListService
+│   ├── PetitionDetailService
+│   ├── PetitionService
+│   └── UserService
+└─Cds3Application
+  ```
+
+## ERD
+![image](https://github.com/CDS-Seminar-Team3/CDS3-Server/assets/97835512/7996597c-5a8d-46fe-8d35-f3f2bec3555c)
