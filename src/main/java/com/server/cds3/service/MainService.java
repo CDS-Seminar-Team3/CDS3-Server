@@ -13,6 +13,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,7 +50,7 @@ public class MainService {
                 .category(maxPetition.getCategory())
                 .title(maxPetition.getTitle())
                 .nickname(users.getNickname())
-                .endDate("")
+                .endDate(dateFormat(maxPetition.getCreatedAt()))
                 .agreeNumber(array[0])
                 .build();
 
@@ -83,6 +85,11 @@ public class MainService {
                 .newPetitionList(newPetitionList)
                 .build();
 
+    }
+    private String dateFormat(LocalDateTime localDateTime){
+        LocalDateTime endDate  = localDateTime.plusMonths(1);
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        return endDate.format(dateTimeFormatter).toString();
     }
 
 }
