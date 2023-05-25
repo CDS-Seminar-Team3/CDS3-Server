@@ -69,13 +69,18 @@ public class MainService {
                 }
             }
 
+            boolean isSee = false;
+            if(petition.getId()%4 ==0){
+                isSee = true;
+            }
+
             newPetitionList.add(NewPetition.builder()
                     .isAgree(isAgreed)
                     .petitionId(petition.getId())
                     .category(petition.getCategory())
                     .title(petition.getTitle())
                     .agreeNumber(allByPetition.size())
-                    .isSee(true)
+                    .isSee(isSee)
                     .build());
         });
 
