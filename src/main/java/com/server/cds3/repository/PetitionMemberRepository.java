@@ -2,6 +2,7 @@ package com.server.cds3.repository;
 
 import com.server.cds3.domain.Petition;
 import com.server.cds3.domain.PetitionMember;
+import com.server.cds3.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -15,4 +16,6 @@ public interface PetitionMemberRepository extends JpaRepository<PetitionMember, 
     long countByPetition(Petition petition);
 
     List<PetitionMember> findByPetition(Petition petition);
+
+    Boolean existsByPetitionAndUser(Petition petition, User user);
 }

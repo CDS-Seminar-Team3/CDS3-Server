@@ -10,4 +10,5 @@ public class GetMyPetitionResponseDto {
     private String category;
     private String title;
     private int agreeNumber;
+    private boolean isAgreed;
 }

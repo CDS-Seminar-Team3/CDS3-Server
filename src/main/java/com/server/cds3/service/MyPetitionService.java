@@ -30,12 +30,13 @@ public class MyPetitionService {
 
         petitionList.forEach(petition -> {
             List<PetitionMember> petitionMemberList = petitionMemberRepository.findAllByPetition(petition);
-
+            Boolean isAgreed = petitionMemberRepository.existsByPetitionAndUser(petition, user);
             GetMyPetitionResponseDto getMyPetitionResponseDto = GetMyPetitionResponseDto.builder()
                     .petitionId(petition.getId())
                     .category(petition.getCategory())
                     .title(petition.getTitle())
                     .agreeNumber(petitionMemberList.size())
+                    .isAgreed(isAgreed)
                     .build();
 
             myPetitionList.add(getMyPetitionResponseDto);
